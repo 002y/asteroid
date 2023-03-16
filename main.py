@@ -35,7 +35,7 @@ for i in range(8):
 game_over = False  # adiciona a variável game_over para controlar a exibição da tela de "Game Over"
 pontos = 0  # adiciona a variável pontos para controlar a contagem de pontos
 
-pygame.mixer.music.load("data/the_field_of_dreams.mp3")
+pygame.mixer.music.load("data/sons/the_field_of_dreams.mp3")
 pygame.mixer.music.play(-1)
 
 running = True
@@ -51,7 +51,7 @@ while running:
         hits = pygame.sprite.spritecollide(player, asteroids, False)
         if hits:
             game_over = True  # colisão detectada, configura a variável game_over para True
-            pygame.mixer.music.load("data/game_over_bad_chest.wav") #musica da tela de game over
+            pygame.mixer.music.load("data/sons/sounds_ping_pong_8bit/ping_pong_8bit_beeep.ogg") #musica da tela de game over
             pygame.mixer.music.play(0)
 
             pontos = 0  # reinicia a contagem de pontos
